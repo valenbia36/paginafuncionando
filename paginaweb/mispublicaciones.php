@@ -70,7 +70,7 @@
       <h4 ><?php echo ("Habitaciones: ".$row["numerodehabitaciones"]);   ?></h4>
       <h4 ><?php echo ("Descripcion: ".$row["descripcion"]);   ?></h4>
       <h4 ><?php echo ("Precio: $".$row["precio"]);   ?></h4>
-      <h4>Estado:</h4>
+      <h4>Estado: </h4>
       </div>
     </div>
       <?php
