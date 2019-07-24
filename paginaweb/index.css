@@ -1,0 +1,286 @@
+body {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+  position: relative;
+  left:-1%;
+  top:5%;
+  background-image: url("img/header-bg.jpg");
+}
+
+
+* {box-sizing: border-box;}
+
+/* Style the navbar */
+.topnav2 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color:#e6e6e6;
+}
+
+/* Navbar links */
+.topnav2 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar links on mouse-over */
+.topnav2 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.topnav2 a.active {
+  background-color:#595959;
+  color: white;
+}
+
+/* Style the input container */
+.topnav2 .login-container {
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+.topnav2 input[type=text], input[type=password] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+/* Style the button inside the input container */
+.topnav2 .login-container button {
+  float: right;
+  padding: 6px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav2 .login-container button:hover {
+  background: #ccc;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav2 .login-container {
+    float: none;
+  }
+  .topnav2 a, .topnav2 input[type=text], .topnav2 .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav2 input[type=text] {
+    border: 1px solid #ccc; 
+  }
+}
+
+.search-field {
+    padding: 40px;
+    position: relative;
+    margin-top:3%;
+    width: 90%;
+    background-color: #fff;
+    left: 5%;
+    height: auto;
+  
+    
+
+}
+
+.titulo {
+	font-size: 18px;
+	color: #222222;
+	position: relative;
+	font-weight: 600;
+	padding: 10px;
+
+}
+
+.switchBtn {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+}
+.switchBtn input {display:none;}
+.slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 8px;
+    color: #fff;
+}
+.slide:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 78px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slide {
+    background-color: #8CE196;
+    padding-left: 40px;
+}
+input:focus + .slide {
+    box-shadow: 0 0 1px #01aeed;
+}
+input:checked + .slide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    left: -20px;
+}
+.slide.round {
+    border-radius: 34px;
+    font-size: 16px;
+}
+.slide.round:before {
+    border-radius: 50%;
+}
+.tipo{
+	position: relative;
+	margin-top: 1%;
+}
+select{
+  border-radius: 4px;
+  width: 180px;
+  height: 50px;
+  font-family:"Poppins", sans-serif;
+  color: #777777;
+  font-size: 16px;
+
+}
+header{
+width: 101.41%
+}
+}
+.ubicacion{
+	position: relative;
+
+}
+.habitaciones{
+	position: relative;
+	margin-top: 1%;
+
+
+
+}
+
+.range {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.rango {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.rango:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.rango::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.rango::-moz-range-thumb {
+    width: 15px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+#precio{
+
+	margin-top: 1.5%;
+	right:200%;
+  font-size: 16px;
+}
+
+#area{
+	top: 30%;
+	right: -5%;
+  font-size:16px;
+
+}
+.buscar{
+	position: relative;
+	margin-top: 1.5%;
+  width: 5cm;
+  height:30%;
+  font-family:"Poppins", sans-serif;
+  font-size:16px; 
+}
+
+.contacto{
+	position: absolute;
+	top:38cm;
+}
+
+
+.social{
+	position: relative;
+	margin-top: 70%;
+  font-family:"Poppins", sans-serif;
+  height: 1.5cm;
+}
+
+#logo{
+  position: absolute;
+  height: 1.3cm;
+  width: 2cm;
+  right: 49%;
+  top: 0%;
+}
+
+
+.login-container{
+  margin-top:-0.4cm;
+}
+#guardar{
+  border-radius: 3cm;
+}
+#guardar:hover{
+  box-shadow: 100px;
+}
