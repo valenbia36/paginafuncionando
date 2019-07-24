@@ -70,7 +70,15 @@
       <h4 ><?php echo ("Habitaciones: ".$row["numerodehabitaciones"]);   ?></h4>
       <h4 ><?php echo ("Descripcion: ".$row["descripcion"]);   ?></h4>
       <h4 ><?php echo ("Precio: $".$row["precio"]);   ?></h4>
-      <h4>Estado: </h4>
+      <h4>Estado:<?php 
+        $pid=$row["id"];
+        $sql2="SELECT idpublicacion from compras where idpublicacion=$pid";
+        $result2=mysqli_query($conn,$sql2);
+        if ($result2->num_rows > 0) 
+        {
+
+
+       </h4>
       </div>
     </div>
       <?php

@@ -76,7 +76,7 @@
         ?>
       <button id="<?php  echo $c ?>" onclick ="this.style.display='none' ; document.getElementById('<?php echo $d ?>').style.display='block'; document.getElementById('<?php echo $cancelar ?>').style.display='block'">Reservar</button>
       <form method="post" id="<?php  echo $d ?>" style="display: none" action="compra.php">
-        <div> Esta seguro que desea reservar esta propiedad?</div>
+        <div> ¿Esta seguro que desea reservar esta propiedad?</div>
         <button name="compra" value="<?php  echo $d ?>">Reservar</button>
         <div> o </div>
       </form>
