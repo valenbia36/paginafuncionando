@@ -38,7 +38,7 @@
         $idpersona = $_SESSION['id'];
         $sql = 
         "
-        SELECT  PI.imagen,B.barrio,P.domicilio,P.precio,P.descripcion,T.tipo, P.numerodehabitaciones,P.id
+        SELECT  PI.idpublicacion,PI.imagen,B.barrio,P.domicilio,P.precio,P.descripcion,T.tipo, P.numerodehabitaciones
         FROM publicaciones P 
         INNER JOIN tipo T on P.idtipo = T.id 
         INNER JOIN barrios B on P.idbarrio = B.id 
@@ -46,17 +46,6 @@
         WHERE P.idusuario = $idpersona
         "  ;
         $result=mysqli_query($conn,$sql);
-        $pid=$row["id"];
-        $sql2="SELECT idpublicacion from compras where idpublicacion=$pid";
-        $result2=mysqli_query($conn,$sql2);
-        	if ($result2->num_rows > 0) 
-        	{ 
-      		$estado="Reservada."
-      		}
-      	else
-      		{ 
-      		$estado="No reservada."
-      		}
       	}
       ?>
         <div class="search-field" >
@@ -68,6 +57,17 @@
         <?php  
         while ($row = $result->fetch_assoc()) 
         {
+        $pid= $row["idpublicacion"];
+        $sql2="SELECT idpublicacion from compras where idpublicacion='$pid'";
+        $result2=mysqli_query($conn,$sql2);
+        	if ($result2->num_rows > 0) 
+        	{ 
+      		$estado="Reservada.";
+      		}
+      	else
+      		{ 
+      		$estado="No reservada.";
+      		}
         ?>
     <div class="">
       <div class="content" align="center">
@@ -80,7 +80,7 @@
       <h4 ><?php echo ("Habitaciones: ".$row["numerodehabitaciones"]);   ?></h4>
       <h4 ><?php echo ("Descripcion: ".$row["descripcion"]);   ?></h4>
       <h4 ><?php echo ("Precio: $".$row["precio"]);   ?></h4>
-      <h4><?php echo ("Estado: $".$estado);   ?> </h4>
+      <h4><?php echo ("Estado: ".$estado);   ?> </h4>
       </div>
     </div>
       <?php
